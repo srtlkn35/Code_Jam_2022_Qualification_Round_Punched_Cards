@@ -8,13 +8,14 @@
         "name": "clang++ - Build and debug active file",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/build/${workspaceFolderBasename}.out",
+        "program": "${workspaceFolder}/build/${workspaceFolderBasename}.exe",
         "args": [],
         "stopAtEntry": true,
         "cwd": "${workspaceFolder}",
         "environment": [],
         "externalConsole": false,
-        "MIMode": "lldb",
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
         "preLaunchTask": "MyBuild"
       }
     ]

@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "Build&Run",
+			"label": "Clean&Build&Run",
 			"dependsOrder": "sequence",
 			"dependsOn": [
 				"MyBuild",
@@ -22,15 +22,9 @@
 				"-std=c++17",
 				"-fdiagnostics-color=always",
 				"-g",
-				"${workspaceFolder}/src/main/*.cpp",
-				"-g",
-				"${workspaceFolder}/src/solve/*.cpp",
-				"-I",
-				"${workspaceFolder}/src/main",
-				"-I",
-				"${workspaceFolder}/src/solve",
+				"${workspaceFolder}/*.cpp",
 				"-o",
-				"${workspaceFolder}/build/${workspaceFolderBasename}.exe"
+				"${workspaceFolder}/${workspaceFolderBasename}.exe"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
@@ -47,9 +41,9 @@
 		{
 			"type": "shell",
 			"label": "MyRun",
-			"command": "${workspaceFolder}/build/${workspaceFolderBasename}.exe",
+			"command": "${workspaceFolder}/${workspaceFolderBasename}.exe",
 			"options": {
-				"cwd": "${workspaceFolder}/build",
+				"cwd": "${workspaceFolder}",
 			},
 		}
 	]
